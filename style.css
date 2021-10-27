@@ -11,6 +11,7 @@ p {
   font-weight: bold;
   font-style: italic;
   color: aliceblue;
+  font-size: small;
 }
 h3 {
   text-align: center;
@@ -34,7 +35,7 @@ html {
   box-sizing: border-box;
 }
 
-/.footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -42,6 +43,7 @@ html {
   background-color: transparent;
   color: white;
   text-align: center;
+  position: static;
 }
 
 .container {
@@ -59,69 +61,114 @@ html {
 .fli {
   margin-left: 35%;
 }
-
 body {
+  font-family: tahoma;
+  height: 100vh;
+  background-image: url(https://picsum.photos/g/3000/2000);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  min-height: 500px;
-  background-color: #333;
 }
 
-.card {
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #f7f5ec;
+  text-align: center;
+  overflow: hidden;
   position: relative;
-  width: 300px;
-  height: 300px;
-  perspective: 500px;
-  cursor: pointer;
+}
 
-  &__container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition-duration: 1s;
-  }
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
 
-  &__back,
-  &__front {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    border: 4px solid #999;
-    border-radius: 5px;
-    background-color: #222;
-    color: #fff;
-    backface-visibility: hidden;
-  }
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
 
-  &__front {
-    justify-content: center;
-    font-family: "pacifico";
-    font-size: 50px;
-    letter-spacing: 3px;
-  }
+.our-team:hover .picture::before {
+  height: 100%;
+}
 
-  &__back {
-    transform: rotateY(180deg);
-    background-color: #999;
-    color: #333;
-    font-family: "kanit";
-    font-size: 18px;
-  }
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
-  &:hover &__container,
-  &:focus &__container {
-    transform: rotateY(180deg);
-    transition-duration: 0.5s;
-  }
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #1369ce;
+  background-color: #f7f5ec;
 }
