@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+  background: url(https://s3.ca-central-1.amazonaws.com/image-web-frankie/dark-wood.jpeg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Quicksand", sans-serif;
+  height: 100vh;
+}
+
+.neon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0 20px;
+  font-size: 6em;
+  color: #fff;
+  text-shadow: 0 0 20px #dd2476;
+}
+
+.neon::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #dd2476;
+  filter: blur(15px);
+}
+
+.neon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #dd2476;
+  z-index: -2;
+  opacity: 0.5;
+  filter: blur(40px);
+}
+
 /* home */
 h1 {
   font-style: italic;
@@ -10,7 +59,7 @@ p {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  color: aliceblue;
+  color: white;
   font-size: small;
 }
 h3 {
@@ -35,9 +84,8 @@ html {
   box-sizing: border-box;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
+footer {
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: transparent;
@@ -60,7 +108,6 @@ html {
 .fli {
   margin-left: 35%;
 }
-
 /* testimonials */
 body {
   font-family: tahoma;
@@ -94,7 +141,7 @@ body {
   content: "";
   width: 100%;
   height: 0;
-  border-radius: 50%;
+  border-radius: 60%;
   background-color: #dd2476;
   position: absolute;
   bottom: 135%;
@@ -113,7 +160,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 60%;
   background-color: #dd2476;
   position: absolute;
   top: 0;
@@ -173,6 +220,11 @@ body {
   color: #dd2476;
   background-color: #f7f5ec;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* projects */
 :root {
   --gradient: linear-gradient(to left top, #dd2476 10%, #ff512f 90%) !important;
@@ -216,11 +268,15 @@ body {
   padding: 50px 0;
   margin-left: 8%;
   border-radius: 50%;
-  transition: 0.3s ease-in;
+  transition: 0.4s ease-in;
 }
 
 #icon-container:hover {
   color: black;
   background: white;
   box-shadow: 0px 5px 15px #dd2476;
+}
+
+.forms {
+  margin-left: 300px !important;
 }
