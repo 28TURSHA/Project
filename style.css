@@ -4,7 +4,7 @@ h1 {
   font-size: large;
   font-weight: bold;
   text-align: center;
-  color: aqua;
+  color: #dd2476;
 }
 p {
   text-align: center;
@@ -43,7 +43,6 @@ html {
   background-color: transparent;
   color: white;
   text-align: center;
-  position: static;
 }
 
 .container {
@@ -51,8 +50,8 @@ html {
 }
 .container2 {
   margin-top: 30%;
-  margin-left: -40%;
-  font-size: 400%;
+  margin-left: 40%;
+  font-size: auto;
 }
 .bg {
   font-size: 90%;
@@ -61,6 +60,8 @@ html {
 .fli {
   margin-left: 35%;
 }
+
+/* testimonials */
 body {
   font-family: tahoma;
   height: 100vh;
@@ -74,7 +75,7 @@ body {
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
-  background-color: #f7f5ec;
+  background-color: white;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -94,7 +95,7 @@ body {
   width: 100%;
   height: 0;
   border-radius: 50%;
-  background-color: #1369ce;
+  background-color: #dd2476;
   position: absolute;
   bottom: 135%;
   right: 0;
@@ -113,7 +114,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #1369ce;
+  background-color: #dd2476;
   position: absolute;
   top: 0;
   left: 0;
@@ -123,7 +124,7 @@ body {
 .our-team .picture img {
   width: 100%;
   height: auto;
-  border-radius: 50%;
+  border-radius: 60%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
 }
@@ -144,7 +145,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #1369ce;
+  background-color: #dd2476;
   position: absolute;
   bottom: -100px;
   left: 0;
@@ -169,6 +170,57 @@ body {
 }
 
 .our-team .social li a:hover {
-  color: #1369ce;
+  color: #dd2476;
   background-color: #f7f5ec;
+}
+/* projects */
+:root {
+  --gradient: linear-gradient(to left top, #dd2476 10%, #ff512f 90%) !important;
+}
+
+body {
+  background: #111 !important;
+}
+
+.card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source: var(--gradient) !important;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--gradient) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 5px solid #fff !important;
+  box-shadow: #222 1px 0 10px;
+  text-decoration: underline;
+}
+/* skills section */
+#icon-container {
+  border: 4px solid white;
+  width: 15%;
+  padding: 50px 0;
+  margin-left: 8%;
+  border-radius: 50%;
+  transition: 0.3s ease-in;
+}
+
+#icon-container:hover {
+  color: black;
+  background: white;
+  box-shadow: 0px 5px 15px #dd2476;
 }
