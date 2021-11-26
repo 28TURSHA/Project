@@ -1,49 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+/* landing */
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: url(https://picsum.photos/g/3000/2000);
-  background: url(https://s3.ca-central-1.amazonaws.com/image-web-frankie/dark-wood.jpeg);
-  background-size: cover;
-  background-position: center;
-  font-family: "Quicksand", sans-serif;
+  font: 'Oswald Sans-serif';
+  overflow: hidden;
+  background: #000;
 }
 
-.neon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0 20px;
+.animation-container {
+  font-weight: 800;
   font-size: 6em;
-  color: #fff;
-  text-shadow: 0 0 20px #dd2476;
+  opacity: 1;
 }
 
-.neon::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 20px;
-  z-index: -1;
-  color: #dd2476;
-  filter: blur(15px);
+.animation-container svg {
+  width: 90%;
+  display: block;
+  top: 50%;
+  margin: -8% 0 0 5%;
+  position: fixed;
 }
 
-.neon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.animation-container svg .text {
   width: 100%;
-  background-color: #dd2476;
-  z-index: -2;
-  opacity: 0.5;
-  filter: blur(40px);
+  fill: transparent;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 90,310;
+  stroke-dashoffset: 0;
+  -webkit-animation: text 8s infinite linear;
+  animation: text 8s infinite linear;
+}
+
+.animation-container svg .text:nth-child(4n + 1) {
+  stroke: #dd2476;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.animation-container svg .text:nth-child(4n + 2) {
+  stroke: #dd2476;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+
+.animation-container svg .text:nth-child(4n + 3) {
+  stroke: #dd2476;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+.animation-container svg .text:nth-child(4n + 4) {
+  stroke: #dd2476;
+  -webkit-animation-delay: -8s;
+  animation-delay: -8s;
+}
+
+@-webkit-keyframes text {
+  100% {
+    stroke-dashoffset: -400;
+  }
 }
 
 /* home */
@@ -68,16 +84,11 @@ h3 {
   font:'Oswald', sans-serif;
   color: #636363;
 }
-/* body {
-  background-image: url("1.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-} */
+
 
 html {
   margin: 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font:'Oswald ,sans-serif';
 }
 
 * {
@@ -110,122 +121,7 @@ footer {
 .fli {
   margin-left: 35%;
 }
-/* testimonials */
-/* body {
-  font: 'Oswald', sans-serif;
-  background-image: url(https://picsum.photos/g/3000/2000);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-}
 
-.our-team {
-  padding: 30px 0 40px;
-  margin-bottom: 30px;
-  background-color: white;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.our-team .picture {
-  display: inline-block;
-  height: 130px;
-  width: 130px;
-  margin-bottom: 50px;
-  z-index: 1;
-  position: relative;
-}
-
-.our-team .picture::before {
-  content: "";
-  width: 100%;
-  height: 0;
-  border-radius: 60%;
-  background-color: #dd2476;
-  position: absolute;
-  bottom: 135%;
-  right: 0;
-  left: 0;
-  opacity: 0.9;
-  transform: scale(5);
-  transition: all 0.3s linear 0s;
-}
-
-.our-team:hover .picture::before {
-  height: 100%;
-}
-
-.our-team .picture::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 60%;
-  background-color: #dd2476;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.our-team .picture img {
-  width: 100%;
-  height: auto;
-  border-radius: 60%;
-  transform: scale(1);
-  transition: all 0.9s ease 0s;
-}
-
-.our-team:hover .picture img {
-  box-shadow: 0 0 0 14px #f7f5ec;
-  transform: scale(0.7);
-}
-
-.our-team .title {
-  display: block;
-  font-size: 15px;
-  color: #4e5052;
-  text-transform: capitalize;
-}
-
-.our-team .social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: #dd2476;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  transition: all 0.5s ease 0s;
-}
-
-.our-team:hover .social {
-  bottom: 0;
-}
-
-.our-team .social li {
-  display: inline-block;
-}
-
-.our-team .social li a {
-  display: block;
-  padding: 10px;
-  font-size: 17px;
-  color: white;
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
-}
-
-.our-team .social li a:hover {
-  color: #dd2476;
-  background-color: #f7f5ec;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
 /* projects */
 :root {
   --gradient: linear-gradient(to left top, #dd2476 10%, #ff512f 90%) !important;
